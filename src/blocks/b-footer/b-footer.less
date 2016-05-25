@@ -1,0 +1,58 @@
+@import "variables.less";
+
+.b-footer {
+	padding: 47px 0 45px;
+	background: #283f56;
+	color: #ffffff;
+
+}
+
+.b-footer__logo {
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.b-footer__lead {
+	font-family: @font-family-primary;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
+.b-footer__copyright {
+	font-family: @font-family-primary;
+	font-size: 11px;
+	line-height: 18px;
+	margin-top: 35px;
+}
+
+.b-footer__text {
+	font-size: 11px;
+	margin: 0 0 2px;
+}
+
+.b-footer__phone {
+	font-size: 22px;
+	font-weight: 500;
+	margin: -1px 0 8px;
+}
+
+.b-footer__button {
+	margin-top: 20px;
+	font-size: 15px;
+	padding-top: 6px;
+	padding-bottom: 3px;
+	padding-left: 22px;
+	padding-right: 22px;
+	border-radius: 15px;
+	box-shadow: none !important;
+	border: none;
+	background: #f32400;
+
+	&:hover, &:focus {
+		background: lighten(#f32400, 5%);
+	}
+	&:active {
+		background: darken(#f32400, 5%);
+	}
+}

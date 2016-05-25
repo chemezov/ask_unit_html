@@ -1,0 +1,42 @@
+@import "variables.less";
+
+.b-splash-block-6 {
+	padding-top: 45px;
+	padding-bottom: 75px;
+
+	background: #dcd7c6;
+}
+
+.b-splash-block-6__title {
+	font-size: 40px;
+	color: #313131;
+	text-transform: uppercase;
+	font-family: @font-family-primary;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 33px;
+	line-height: 86px;
+
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+
+		width: 60px;
+		margin-left: -30px;
+		border-bottom: 1px solid #292e32;
+	}
+}
+
+.b-splash-block-6__content {
+	width: 951px;
+	height: 498px;
+
+	background: left top no-repeat url("../../assets/img/splash-block-6/image.png");
+	margin: 0 auto;
+	position: relative;
+	left: 10px;
+}

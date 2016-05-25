@@ -1,0 +1,271 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+
+        title My Site - #{title}
+        meta(name="description", content="")
+
+        block styles
+            link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Arimo:400,700,400italic|Fira+Sans:400,300,300italic,500,400italic&subset=latin,cyrillic', type='text/css')
+            link(rel='stylesheet', href='assets/css/bootstrap.min.css')
+            link(rel='stylesheet', href='assets/css/common.min.css')
+
+        block scripts
+            script(src='assets/vendor/jquery/dist/jquery.min.js')
+            script(src='assets/vendor/bootstrap/dist/js/bootstrap.min.js')
+            script(src='assets/js/script.js')
+    body
+        <!--[if lte IE 8]>
+        p.browserupgrade.
+            You are using an #[strong outdated] browser.
+            Please #[a(target="_blank", href="http://browsehappy.com/") upgrade your browser] to improve your experience.
+        <!--<![endif]-->
+
+        nav.navbar.navbar-default
+            .container
+                .navbar-header
+                    button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    //-a.navbar-brand(href="#") Project name
+                #navbar.collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li.active: a(href="#") Главная
+                        li: a(href="#") Компания
+                        li: a(href="#") Строительство
+                        li: a(href="#") Проектирование
+                        li: a(href="#") Цены
+                        li: a(href="#") Проекты
+                        li: a(href="#") Портфолио
+                        li: a(href="#") Квартиру на дом
+                        li: a(href="#") Ипотека
+                        li: a(href="#") Контакты
+
+        .b-header
+            .container.b-header__container
+                a.b-header__logo(href='#'): img(src='assets/img/logo.png')
+                .b-header__lead
+                    p.b-header__lead-text Строительство коттеджей #[br]в Екатеринбурге
+
+                .b-header__cta
+                    a.b-button.b-button_primary.b-button_animated.b-header__button узнать цену строительства
+                .b-header__info
+                    p.b-header__info-text Есть вопросы? Звоните!
+                    p.b-header__phone 8 (343) #[strong 298-37-68]
+                    p.b-header__info-text г. Екатеринбург, ул. Щербакова, 4 #[br]ТРЦ «Глобус», офис 310
+
+        .b-jumbotron.text-center
+            .b-jumbotron__img-container
+                img.b-jumbotron__img(src="assets/img/jumbotron.jpg")
+
+            .b-jumbotron__content
+                p.b-jumbotron__title Дом под ключ - заезжай и живи!
+                p.b-jumbotron__lead Самовыражение через пространство
+                p.b-jumbotron__cta
+                    a.b-jumbotron__button(href='#') Хочу узнать больше
+
+
+        .container
+            .b-splash-block-1
+                p.b-splash-block-1__title Что такое #[i «под ключ»?]
+
+                p.b-splash-block-1__lead.
+                    Комплектации компании «Индекс Хоум» — это необходимый набор опций для строительства загородного дома «под ключ»,
+                    полностью завершенного и не требующего дополнительных вложений. Осознавая вашу занятость и огромное количество
+                    нюансов в строительстве, которые невозможно понять «вот так сразу», мы разработали их, чтобы сэкономить вам время
+                    и, как говорится, нервы. В отличие от большинства конкурентов, даже наша базовая комплектация подразумевает
+                    строительство дома полностью «под ключ», обеспечивая при этом ваше заселение, сразу после окончания строительства.
+
+        .container
+            .b-splash-block-2
+                p.b-splash-block-2__title Преимущества
+
+                ul.b-splash-block-2__list.clearfix
+                    li.b-splash-block-2__item
+                        img.b-splash-block-2__item-icon(src='assets/img/splash-block-2/icon1.png')
+                        p.b-splash-block-2__item-text Прозрачная смета с фиксированной стоимостью по всем работам
+                    li.b-splash-block-2__item
+                        img.b-splash-block-2__item-icon(src='assets/img/splash-block-2/icon2.png')
+                        p.b-splash-block-2__item-text Профессиональные архитекторы в штате
+                    li.b-splash-block-2__item
+                        img.b-splash-block-2__item-icon(src='assets/img/splash-block-2/icon3.png')
+                        p.b-splash-block-2__item-text Разработка дизайн проекта дома
+                    li.b-splash-block-2__item
+                        img.b-splash-block-2__item-icon(src='assets/img/splash-block-2/icon4.png')
+                        p.b-splash-block-2__item-text Ландшафтный дизайн и благоустройство участка
+                    li.b-splash-block-2__item
+                        img.b-splash-block-2__item-icon(src='assets/img/splash-block-2/icon5.png')
+                        p.b-splash-block-2__item-text Гарантия 7 лет
+                    li.b-splash-block-2__item
+                        img.b-splash-block-2__item-icon(src='assets/img/splash-block-2/icon5.png')
+                        p.b-splash-block-2__item-text Соблюдение сроков
+
+
+        .b-splash-block-3
+            .container
+                p.b-splash-block-3__title порядок работ
+
+                ul.b-splash-block-3__list.clearfix
+                    li.b-splash-block-3__item.
+                        Универсальный — свайно-ростверковый. Подходит для большинства типов грунтов и идеален в строительстве малоэтажных сооружений.
+                    li.b-splash-block-3__item.
+                        Универсальный — свайно-ростверковый. Подходит для большинства типов грунтов и идеален в строительстве малоэтажных сооружений.
+                    li.b-splash-block-3__item.
+                        Универсальный — свайно-ростверковый. Подходит для большинства типов грунтов и идеален в строительстве малоэтажных сооружений.
+                .text-center
+                    a.b-splash-block-3__button(href='#') Записаться на консультацию
+
+        .container
+            .b-splash-block-4
+                p.b-splash-block-4__title Конструктив дом
+                ul.b-splash-block-4__list.clearfix
+                    li.b-splash-block-4__item
+                        img.b-splash-block-4__item-image(src='assets/img/splash-block-4/image1.jpg')
+                        p.b-splash-block-4__item-title Фундамент
+                        p.b-splash-block-4__item-text Универсальный — свайно-ростверковый. Подходит для большинства типов грунтов и идеален в строительстве малоэтажных сооружений.
+                    li.b-splash-block-4__item
+                        img.b-splash-block-4__item-image(src='assets/img/splash-block-4/image1.jpg')
+                        p.b-splash-block-4__item-title Стены и кровля
+                        p.b-splash-block-4__item-text Утепленные и возведенные по всем стандартам. Прослужат многим поколениям. Наши технологии подтверждены практикой и наукой.
+                    li.b-splash-block-4__item
+                        img.b-splash-block-4__item-image(src='assets/img/splash-block-4/image1.jpg')
+                        p.b-splash-block-4__item-title Инженерные коммуникации
+                        p.b-splash-block-4__item-text Задача организации, в особенности же консультация с широким активом позволяет выполнять важные задания по разработке системы обучения кадров.
+
+        .b-splash-block-5
+            .container
+                p.b-splash-block-5__title финишная внешняя отделка
+
+                .b-splash-block-5__content
+                    .b-splash-block-5__item.b-splash-block-5__item_item_1
+                        p.b-splash-block-5__item-title Обшивка стен материалами
+                        p.b-splash-block-5__item-text.
+                            выбраной комплектации: #[br]
+                            евровагонка, имитация бруса, штукотурка или искуственный камень.
+                    .b-splash-block-5__item.b-splash-block-5__item_item_2
+                        p.b-splash-block-5__item-title Обналичка окон и дверей,
+                        p.b-splash-block-5__item-text обшивка углов здания. Именно эти элементы декора завершают образ дома.
+                    .b-splash-block-5__item.b-splash-block-5__item_item_3
+                        p.b-splash-block-5__item-title Ограждающие элементы:
+                        p.b-splash-block-5__item-text перила, балясины, ступени — все это должно быть и соответствовать общему стилю дома
+                    .b-splash-block-5__item.b-splash-block-5__item_item_4
+                        p.b-splash-block-5__item-title Крыльцо и балкон,
+                        p.b-splash-block-5__item-text на которых каждый из нас представлял себя с чашечнкой кофе в ясную погоду
+                    .b-splash-block-5__item.b-splash-block-5__item_item_5
+                        p.b-splash-block-5__item-title Отливы и подоконники
+                        p.b-splash-block-5__item-text на которых каждый из нас представлял себя с чашечнкой кофе в ясную погоду
+
+        .b-splash-block-6
+            .container
+                p.b-splash-block-6__title Инженерные коммуникации
+
+                .b-splash-block-6__content
+
+        .b-splash-block-7
+            .container
+                p.b-splash-block-7__title Внутренняя отделка под ключ
+                ul.b-splash-block-7__list.clearfix
+                    li.b-splash-block-7__item
+                        p.b-splash-block-7__item-title Комфорт
+                        .b-splash-block-7__item-lead
+                            p.b-splash-block-7__price-text от #[i.b-splash-block-7__price 12 000] руб/м2
+                            p.b-splash-block-7__price-description (в стоимость входит  работа и материалы)
+
+                        img.b-splash-block-7__item-image.img-responsive(src='http://placehold.it/325x152')
+
+                        ul.b-splash-block-7__features
+                            li.b-splash-block-7__features-item Гипсокартонные работы
+                            li.b-splash-block-7__features-item Плиточные работы
+                            li.b-splash-block-7__features-item Малярные работы
+                            li.b-splash-block-7__features-item Покраска стен и поклейка обоев
+                            li.b-splash-block-7__features-item Укладка ламината \ Паркетной доски
+                            li.b-splash-block-7__features-item Сантехнические #[br]и Электромонтажные работы
+
+                        a.b-button.b-button_primary.b-button_block.b-splash-block-7__button(href='') Получить консультацию!
+
+                    li.b-splash-block-7__item.b-splash-block-7__item_ribbon_hit
+                        p.b-splash-block-7__item-title Комфорт
+                        .b-splash-block-7__item-lead.b-splash-block-7__item-lead_background_yellow
+                            p.b-splash-block-7__price-text от #[i.b-splash-block-7__price 12 000] руб/м2
+                            p.b-splash-block-7__price-description (в стоимость входит  работа и материалы)
+
+                        img.b-splash-block-7__item-image.img-responsive(src='http://placehold.it/325x152')
+
+                        p.b-splash-block-7__item-bonus +Дизайн проект
+
+                        ul.b-splash-block-7__features
+                            li.b-splash-block-7__features-item Гипсокартонные работы
+                            li.b-splash-block-7__features-item Плиточные работы
+                            li.b-splash-block-7__features-item Малярные работы
+                            li.b-splash-block-7__features-item Покраска стен и поклейка обоев
+                            li.b-splash-block-7__features-item Укладка ламината \ Паркетной доски
+                            li.b-splash-block-7__features-item Сантехнические и Электромонтажные работы
+
+                        a.b-button.b-button_primary.b-button_block.b-splash-block-7__button(href='') Получить консультацию!
+
+                    li.b-splash-block-7__item
+                        p.b-splash-block-7__item-title Комфорт
+                        .b-splash-block-7__item-lead
+                            p.b-splash-block-7__price-text от #[i.b-splash-block-7__price 12 000] руб/м2
+                            p.b-splash-block-7__price-description (в стоимость входит  работа и материалы)
+
+                        img.b-splash-block-7__item-image.img-responsive(src='http://placehold.it/325x152')
+
+                        p.b-splash-block-7__item-bonus +Дизайн проект
+
+                        ul.b-splash-block-7__features
+                            li.b-splash-block-7__features-item Гипсокартонные работы
+                            li.b-splash-block-7__features-item Плиточные работы
+                            li.b-splash-block-7__features-item Малярные работы
+                            li.b-splash-block-7__features-item Покраска стен и поклейка обоев
+                            li.b-splash-block-7__features-item Укладка ламината \ Паркетной доски
+                            li.b-splash-block-7__features-item Сантехнические и Электромонтажные работы
+
+                        a.b-button.b-button_primary.b-button_block.b-splash-block-7__button(href='') Получить консультацию!
+
+        .b-order-form
+            .container
+                .b-order-form__title оставить заявку
+
+                form.b-order-form__form
+                    .form-group
+                        label Имя
+                        input.form-control
+                    .form-group
+                        label Телефон
+                        input.form-control
+                    br
+                    .row
+                        .col-xs-6
+                            a.btn.btn-primary.btn-block.b-order-form__button Отправить
+                        .col-xs-6
+                            p.b-order-form__phone-text Телефон отдела продаж:
+                            p.b-order-form__phone +7 (343) 37 000 00
+
+        .b-footer
+            .container
+                .row
+                    .col-xs-4
+                        a.b-footer__logo(href='#'): img(src='assets/img/footer-logo.png')
+                        p.b-footer__lead Строительство коттеджей #[br]в Екатеринбурге
+                        p.b-footer__copyright © UNIT, 2014-2016 #[br]Все права на материалы принадлежат компании «UNIT»
+                    .col-xs-4
+                        ul.b-footer-menu
+                            li.b-footer-menu__item: a.b-footer-menu__link(href='#') Строительство коттеджа под ключ
+                            li.b-footer-menu__item: a.b-footer-menu__link(href='#') Цены на строительство коттеджей
+                            li.b-footer-menu__item: a.b-footer-menu__link(href='#') Коттедж из газоблоков
+                            li.b-footer-menu__item: a.b-footer-menu__link(href='#') Проекты двухэтажных домов
+                            li.b-footer-menu__item: a.b-footer-menu__link(href='#') Проекты одноэтажных домов
+                            li.b-footer-menu__item: a.b-footer-menu__link(href='#') Блог о строительстве
+                            li.b-footer-menu__item: a.b-footer-menu__link(href='#') Ипотека на строительство дома
+                    .col-xs-4
+                        p.b-footer__text Есть вопросы? Звоните!
+                        p.b-footer__phone 8 (343) #[strong 298-37-68]
+                        p.b-footer__text г. Екатеринбург, ул. Щербакова, 4 #[br]ТРЦ «Глобус», офис 310
+
+                        a.b-button.b-button_primary.b-footer__button(href='#') Заказать звонок

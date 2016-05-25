@@ -1,0 +1,95 @@
+@import "variables.less";
+
+@keyframes blickreg {
+	0% {
+		top: 120%;
+	}
+	10% {
+		top: -160%;
+	}
+	100% {
+		top: -160%;
+	}
+}
+
+.b-button {
+	position: relative;
+	white-space: nowrap;
+	box-sizing: border-box;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 10px 18px 7px;
+	font-family: @font-family-primary;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: normal;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 0 auto;
+	cursor: pointer;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+	}
+}
+
+.b-button_big {
+	font-size: 18px;
+}
+
+.b-button_primary {
+	background: #f32400;
+	border: 1px solid #c51d00;
+	box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.3);
+	color: #fff;
+
+	&:hover, &:active, &:focus {
+		color: #fff;
+		box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.3), inset 0 -2px 0 rgba(255, 255, 255, 0.3);
+	}
+
+	&:active {
+		box-shadow: inset 0 6px 10px rgba(0, 0, 0, 0.3), inset 0 -6px 10px rgba(0, 0, 0, 0.3);
+	}
+}
+
+.b-button_animated {
+	overflow: hidden;
+	transition: top, background-color 0.25s cubic-bezier(0, 0.3, 1, 0.7);
+	-webkit-animation-name: blickreg;
+	animation-name: blickreg;
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: backwards;
+	animation-fill-mode: backwards;
+}
+
+.b-button_animated:before,
+.b-button_animated:after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 100%;
+}
+
+.b-button_animated:before {
+	width: 140%;
+	top: inherit;
+	left: -20%;
+	opacity: 0.6;
+	background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), #ffffff 40%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0));
+	-webkit-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+}
+
+.b-button_info {
+	color: #0fb50f;
+	border: 2px solid #0fb50f;
+	background: #f3f9fb;
+}
+
+.b-button_block {
+	display: block;
+}
