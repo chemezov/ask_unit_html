@@ -2,7 +2,7 @@ const fs = require('fs');
 
 var gulp = require('gulp'); // Сообственно Gulp JS
 var open = require('gulp-open');
-var imagemin = require('gulp-imagemin');// Минификация изображений
+const imagemin = require('gulp-imagemin'); // Минификация изображений
 var uglify = require('gulp-uglify'); // Минификация JS
 var concat = require('gulp-concat'); // Склейка файлов
 var browserSync = require('browser-sync').create();
@@ -150,8 +150,9 @@ gulp.task('img', [], function () {
         //.pipe(imagemin({
         //    progressive: true,
         //    interlaced: true,
-        //    svgoPlugins: [{removeViewBox: false}, {removeUselessStrokeAndFill: false}]
+        //svgoPlugins: [{removeViewBox: false}, {removeUselessStrokeAndFill: false}]
         //}))
+        .pipe(imagemin())
         .pipe(gulp.dest('./build/assets/img'));
 });
 
